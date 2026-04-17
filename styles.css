@@ -1,0 +1,68 @@
+:root {
+    --np-red: #e31e24;
+    --dark: #1a1a1a;
+    --gray: #f8f9fa;
+}
+
+body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--dark); overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    color: white;
+}
+.hero-content-right { max-width: 800px; }
+.hero-content-right h1 { font-size: 4rem; font-weight: 800; margin-bottom: 20px; }
+.highlight { color: var(--np-red); }
+.subtitle { font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9; }
+
+/* Problem Statement */
+.comparison-table-section { padding: 100px 0; background: white; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.comparison-card { padding: 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+.card-header { font-weight: 800; font-size: 1.4rem; margin-bottom: 30px; }
+.old { border-top: 6px solid #ccc; }
+.new { border-top: 6px solid var(--np-red); background: #fffcfc; }
+.comparison-list { list-style: none; padding: 0; }
+.comparison-list li { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.4; }
+
+/* Benefits */
+.benefits-section { padding: 100px 0; background: var(--gray); text-align: center; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; }
+.benefit-item { background: white; padding: 30px; border-radius: 12px; transition: 0.3s; }
+.benefit-item:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.benefit-icon { font-size: 3rem; margin-bottom: 20px; }
+
+/* Stats */
+.stats-section { padding: 80px 0; background: var(--dark); color: white; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat-card { text-align: center; padding: 30px; background: #222; border-radius: 10px; border-bottom: 3px solid var(--np-red); }
+.stat-emoji { font-size: 2.5rem; margin-bottom: 15px; }
+.stat-value { font-size: 2rem; font-weight: 800; color: var(--np-red); }
+
+/* Features */
+.feature-block { padding: 80px 0; }
+.feature-flex { display: flex; align-items: center; gap: 60px; }
+.feature-flex.reverse { flex-direction: row-reverse; }
+.feature-image img { width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.badge-red { background: var(--np-red); color: white; padding: 5px 15px; border-radius: 5px; margin-bottom: 20px; display: inline-block; font-weight: bold; }
+
+/* Accordion */
+.faq-section { padding: 80px 0; }
+.accordion-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+.accordion-header { width: 100%; padding: 20px; display: flex; justify-content: space-between; cursor: pointer; border: none; font-size: 1.1rem; font-family: inherit; font-weight: 600; text-align: left; }
+.accordion-content { max-height: 0; overflow: hidden; padding: 0 20px; transition: 0.3s; }
+.accordion-item.active .accordion-content { max-height: 200px; padding: 20px; }
+
+/* Helpers */
+.gray-bg { background: var(--gray); }
+.section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 60px; text-align: center; }
+.btn-primary { background: var(--np-red); color: white; padding: 20px 60px; border: none; font-weight: 800; border-radius: 5px; cursor: pointer; font-size: 1.1rem; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testi-card { background: white; padding: 30px; border-radius: 10px; }
