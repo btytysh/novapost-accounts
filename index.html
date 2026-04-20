@@ -32,8 +32,6 @@
                 <div class="journey-box current">
                     <h3>❌ Поточний процес (As Is)</h3>
                     <div class="steps">
-                        <div class="step">Потреба в рахунку</div>
-                        <div class="arrow">→</div>
                         <div class="step">Пошук рахунку на пошті</div>
                         <div class="arrow">→</div>
                         <div class="step">Лист менеджеру</div>
@@ -77,9 +75,9 @@
             </div>
 
             <div class="additional-pains justify-center">
-                <div class="pain-pill">📊 Відсутність зведеної ситуації</div>
+                <div class="pain-pill">📊 Відсутність зведеної інформації</div>
                 <div class="pain-pill">🗓️ Неможливість фінансового планування</div>
-                <div class="pain-pill">⌛ Залежність від графіку менеджера</div>
+                <div class="pain-pill">⌛ Залежність від графіку роботи менеджера</div>
                 <div class="pain-pill">📂 Хаос у поштовій переписці</div>
             </div>
         </div>
@@ -119,24 +117,59 @@
     </section>
 
     <section class="section gray-bg">
-        <div class="container">
-            <h2 class="section-title">Конкурентний аналіз</h2>
-            <div class="competitor-screens">
-                <div class="screen-item">
+    <div class="container">
+        <h2 class="section-title">Конкурентний аналіз</h2>
+        <div class="competitor-screens">
+            <div class="screen-item">
+                <div class="img-wrapper" onclick="openLightbox(this)">
                     <img src="competitor_1.png" alt="GLS" onerror="this.src='https://via.placeholder.com/400x250?text=GLS'">
-                    <h4>GLS</h4>
                 </div>
-                <div class="screen-item">
+                <h4>GLS</h4>
+            </div>
+            <div class="screen-item">
+                <div class="img-wrapper" onclick="openLightbox(this)">
                     <img src="competitor_2.png" alt="Swotzy" onerror="this.src='https://via.placeholder.com/400x250?text=Swotzy'">
-                    <h4>Swotzy</h4>
                 </div>
-                <div class="screen-item">
+                <h4>Swotzy</h4>
+            </div>
+            <div class="screen-item">
+                <div class="img-wrapper" onclick="openLightbox(this)">
                     <img src="competitor_3.png" alt="TO FILL" onerror="this.src='https://via.placeholder.com/400x250?text=TO+FILL'">
-                    <h4>TO FILL</h4>
                 </div>
+                <h4>Shopify</h4>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoomed view">
+</div>
+
+<script>
+    // Функція для відкриття модального вікна
+    function openLightbox(element) {
+        const imgSrc = element.querySelector('img').src;
+        document.getElementById('lightbox-img').src = imgSrc;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden'; // Заборона скролу при відкритій картинці
+    }
+
+    // Функція для закриття
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = 'auto'; // Повернення скролу
+    }
+
+    // Додаємо також функцію для FAQ (якщо ви копіюєте весь скрипт)
+    function toggleAccordion(element) {
+        const item = element.parentElement;
+        item.classList.toggle('active');
+        const icon = element.querySelector('.icon');
+        icon.textContent = item.classList.contains('active') ? '−' : '+';
+    }
+</script>
 
     <section class="benefits-section section">
         <div class="container">
@@ -150,11 +183,11 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">🏢</div>
                     <h3>Управління організаціями</h3>
-                    <p>Керуйте складними організаціями безпосередньо зі свого аккаунту.</p>
+                    <p>Керуйте різними організаціями зі свого аккаунту.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">📊</div>
-                    <h3>Повно даних</h3>
+                    <h3>Повнота даних</h3>
                     <p>Специфікації, акти та реквізити доступні в один клік.</p>
                 </div>
                 <div class="benefit-item">
